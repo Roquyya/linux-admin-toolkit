@@ -53,4 +53,23 @@ fi
 # Exit successfully if all were checked and running
 exit 0
 
+#Part 3
+# Create a small log file
+echo "This is a small log file." > app_debug.log
 
+# Create a large log file (5MB)
+head -c 5M /dev/urandom > system_errors.log
+
+# Create another large log file (10MB) and set its modification time to 8 days ago
+head -c 10M /dev/urandom > access.log
+touch -d "8 days ago" access.log
+
+# Create a small log file
+echo "This is a small log file." > app_debug.log
+
+# Create a large log file (5MB)
+head -c 5M /dev/urandom > system_errors.log
+
+# Create another large log file (10MB) and set its modification time to 8 days ago
+head -c 10M /dev/urandom > access.log
+touch -d "8 days ago" access.log
